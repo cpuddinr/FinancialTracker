@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #e0f2f4;
+    font-family: Arial, sans-serif;
+    color: #332f3b;
+}
+
+.website {
+    padding: 25px;
+}
+
+.header {
+    background: #fffbfc;
+    border: 2px solid #bad6da;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.judul {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #e8728e;
+}
+
+.date {
+    font-size: 13px;
+    color: #948e9c;
+}
+
+.total {
+    text-align: right;
+}
+
+.label1 {
+    font-size: 12px;
+    color: #948e9c;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e8728e;
+}
+
+.jumlah {
+    font-size: 12px;
+    color: #948e9c;
+}
+
+.tracker {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    background: #fffbfc;
+    border: 2px solid #ece3e6;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.form-box {
+    width: 350px;
+}
+
+.list-box {
+    flex: 1;
+}
+
+.title-box {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ece3e6;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-bottom: 10px;
+}
+
+.kategori {
+    margin-bottom: 20px;
+}
+
+.label2 {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    color: #948e9c;
+    margin-bottom: 8px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tipe {
+    padding: 7px 12px;
+    border: 1px solid #ece3e6;
+    border-radius: 15px;
+    background: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+    color: #332f3b;
+    cursor: pointer;
+}
+
+.tipe:hover {
+    border-color: #f791a9;
+}
+
+.active {
+    background: #f791a9;
+    border-color: #f791a9;
+    color: #ffffff;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 50%;
+}
+
+.tipe-add {
+    border-style: dashed;
+    color: #e8728e;
+    font-weight: bold;
+}
+
+.input-section {
+    margin-bottom: 12px;
+}
+
+.form-box input,
+.modal-box input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ece3e6;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 14px;
+    color: #332f3b;
+}
+
+.form-box input:focus,
+.modal-box input:focus {
+    border-color: #f791a9;
+    outline: none;
+}
+
+.simpan {
+    width: 100%;
+    padding: 12px;
+    margin-top: 4px;
+    border: 2px solid #f791a9;
+    border-radius: 8px;
+    background: #f791a9;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background: #e8728e;
+    border-color: #e8728e;
+}
+
+.error {
+    min-height: 16px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #e2617d;
+}
+
+.transaction-list {
+    max-height: 65vh;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.date-header {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.date-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tx-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ece3e6;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.tx-cat {
+    flex-shrink: 0;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.tx-notes {
+    flex: 1;
+    min-width: 0;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.tx-amount {
+    padding: 5px 9px;
+    border: 1px solid #bad6da;
+    border-radius: 12px;
+    background: #e0f2f4;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tx-del {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #ece3e6;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #948e9c;
+    cursor: pointer;
+}
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background: rgba(40, 30, 40, 0.45);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal-box {
+    width: 100%;
+    max-width: 320px;
+    padding: 22px;
+    border: 2px solid #ece3e6;
+    border-radius: 10px;
+    background: #fffbfc;
+}
+
+.modal-title {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.modal-button {
+    padding: 8px 14px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-button.cancel {
+    border: 1px solid #ece3e6;
+    background: #ffffff;
+    color: #948e9c;
+}
+
+.modal-button.confirm {
+    border: 1px solid #f791a9;
+    background: #f791a9;
+    color: #ffffff;
+}
+

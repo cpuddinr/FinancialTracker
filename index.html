@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker (535250151)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="website">
+        <div class="header">
+            <div class="header-title">
+                <div class="judul">Money Tracker</div>
+                <div class="date" id="todayDate">tanggal...</div>
+            </div>
+
+            <div class="total">
+                <div class="label1">Total Amount</div>
+                <div class="amount" id="totalAmount">Rp 0</div>
+                <div class="jumlah" id="itemCount">0 Transaction</div>
+            </div>
+        </div>
+
+        <div class="tracker">
+            <div class="box form-box">
+                <div class="title-box">Add Transaction</div>
+
+                <form id="expenseForm">
+                    <div class="kategori">
+                        <span class="label2">Category</span>
+                        <div class="list" id="categoryScroll"></div>
+                    </div>
+
+                    <div class="kategori">
+                        <span class="label2">Amount (Rp)</span>
+                        <input type="number" id="amountInput" placeholder="0">
+                    </div>
+
+                    <div class="kategori">
+                        <span class="label2">Notes</span>
+                        <input type="text" id="notesInput" placeholder="Ex: makan siang">
+                    </div>
+
+                    <button type="save" class="simpan">Save Transaction</button>
+                    <div class="error" id="errorMsg"></div>
+                </form>
+            </div>
+
+            <div class="box list-box">
+                <div class="title-box">Transaction History</div>
+
+                <div class="transaction-list" id="transactionList">
+                    <div class="empty-state" id="emptyState">Belum ada transaksi</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="categoryModalOverlay">
+        <div class="modal-box">
+            <div class="modal-title">Add New Category</div>
+            <input type="text" id="newCategoryInput" placeholder="Ex: Hiburan">
+
+            <div class="modal-actions">
+                <button type="button" class="modal-button cancel" id="cancelBtn">Cancel</button>
+                <button type="button" class="modal-button confirm" id="confirmBtn">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
